@@ -1,1 +1,33 @@
+.Navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-gap: 20px;
+    height: 20px;
+    margin: 30px 30px;
+}
 
+.Navbar .logo img {
+  height: 25px;  
+}
+
+.Navbar ul {
+    display: flex;
+    grid-gap: 20px;
+}
+
+
+/* estilização para tablet */
+@media (max-width: 780px) {
+    .Navbar {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+    }
+}
+  
+/* estilização para smartphone */
+@media (max-width: 420px) {
+    .Navbar {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+}  
