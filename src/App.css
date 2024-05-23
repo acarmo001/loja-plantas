@@ -1,26 +1,35 @@
+/* estilização para desktop */
+
 .Navbar {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;    
     grid-gap: 20px;
-    height: 20px;
+    height: 40px;
     margin: 30px 30px;
 }
 
 .Navbar .logo img {
-  height: 25px;  
+  height: 35px;  
 }
 
 .Navbar ul {
-    display: flex;
-    grid-gap: 20px;
+  display: flex;
+  grid-gap: 20px;
 }
 
+.Main img .topBanner {
+  width: 100%;
+}
 
 /* estilização para tablet */
 @media (max-width: 780px) {
     .Navbar {
       grid-template-columns: 1fr 1fr;
       grid-gap: 15px;
+    }
+    .Main .topBanner {
+      width: 100%;
     }
 }
   
@@ -29,5 +38,8 @@
     .Navbar {
       grid-template-columns: 1fr;
       grid-gap: 10px;
+    }
+    .Main .topBanner {
+      width: 100%;
     }
 }  
