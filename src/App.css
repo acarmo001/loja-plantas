@@ -1,5 +1,6 @@
 .Navbar {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 1fr 1fr;    
     grid-gap: 20px;
     height: 20px;
@@ -10,12 +11,21 @@
   height: 25px;  
 }
 
+=======
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+>>>>>>> c969f69d0a5dfef7fc55dc84fc2d8325c2f97db2
 .Navbar ul {
     display: flex;
     grid-gap: 20px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c969f69d0a5dfef7fc55dc84fc2d8325c2f97db2
 /* estilização para tablet */
 @media (max-width: 780px) {
     .Navbar {
