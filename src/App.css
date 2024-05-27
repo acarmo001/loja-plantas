@@ -18,10 +18,6 @@
   grid-gap: 20px;
 }
 
-.Main img .topBanner {
-  width: 100%;
-}
-
 /* estilização para tablet */
 @media (max-width: 780px) {
     .Navbar {
