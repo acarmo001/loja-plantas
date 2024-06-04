@@ -1,21 +1,93 @@
 /* estilização para desktop */
+body {
+  font-family: "Poppins", sans-serif;
 
-.Navbar {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;    
-    grid-gap: 20px;
-    height: 40px;
-    margin: 30px 30px;
 }
 
-.Navbar .logo img {
+.Navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  grid-gap: 20px;    
+  margin: 30px 30px;
+  justify-content: center;
+}
+
+.Navbar h1 img {
   height: 35px;  
 }
 
 .Navbar ul {
-  display: flex;
+  display: flex;  
   grid-gap: 20px;
+  font-size: 1rem;  
+}
+
+.Navbar-center {
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  
+}
+
+.Navbar-center a {
+  color: #B6B5B5;
+  text-decoration: none;
+}
+
+.Navbar-center a:hover {
+  color: #1E1E1E;  
+}
+
+.Navbar-right {
+  justify-content: right;
+}
+
+.searchBtn {
+  position: relative;
+}
+
+.searchBtn, input {
+  position: absolute;
+  right: 45px;
+  top: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #1E1E1E;
+  font-size: 1rem;  
+}
+
+.searchBtn, button {
+  position: absolute;
+  right: 50px;
+  border: none;
+  background-color: transparent; 
+  text-align: center;
+  text-decoration: none;  
+  font-size: 14px;
+  padding-top: 12px;
+  
+}
+
+.Navbar-right,a {
+  padding: 9px 0 9px 0;  
+}
+
+.Main .topBanner,img {
+  max-width: 100%;
+}
+
+.topBanner {
+  position: relative;
+}
+
+.topBanner h2 {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  color: #40514e;
+  max-width: 450px;
+  line-height: 90px;
+  font-size: 76px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #B6B5B5;
 }
 
 /* estilização para tablet */

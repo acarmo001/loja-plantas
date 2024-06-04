@@ -1,10 +1,11 @@
 export default function Main(){
     return (
         <main>
-
-            <h1>Compre a sua planta de sonho</h1>
-            <img className="topBanner" src="./images/banner.jpg" alt="" />
-
+            <div className="topBanner">
+                <h2>Compre a sua planta de sonho</h2>
+                <img src="./images/banner.jpg" alt="" />
+            </div>
+            
             <section>
                 <h2>As mais vendidas</h2>
                 <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
