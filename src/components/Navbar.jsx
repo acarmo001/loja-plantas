@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
@@ -12,9 +13,9 @@ export default function Navbar() {
             </h1>            
 
             <ul className="Navbar-center">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Produtos</a></li>
-                <li><a href="/contacts">Contatos</a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/products">Produtos</NavLink></li>
+                <li><NavLink to="/contact">Contatos</NavLink></li>
             </ul>
 
             <ul className="Navbar-right">
