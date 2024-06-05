@@ -47,16 +47,17 @@ body {
 
 .searchBtn, input {
   position: absolute;
-  right: 45px;
+  right: 50px;
   top: 16px;
   font-family: "Poppins", sans-serif;
   color: #1E1E1E;
   font-size: 1rem;  
 }
 
-.searchBtn,button {
+.Navbar-right .searchBtn button {
   position: absolute;
   right: 50px;
+  top: 10px;
   border: none;
   background-color: transparent; 
   text-align: center;
