@@ -1,15 +1,16 @@
+import Card from "./Card";
+
 export default function Home(){
     return (
         <main>
-            <div className="topBanner">
-                <h2>Compre a sua planta de sonho</h2>
-                <img src="./images/banner.jpg" alt="" />
-            </div>
             
-            <section>
-                <h2>As mais vendidas</h2>
-                <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
-                <button type="button">ver mais</button>
+            
+            <section className="first-section">
+                <div>
+                    <h2>As mais vendidas</h2>
+                    <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
+                    <button type="button">ver mais</button>
+                </div>                
                 <ul>
                     <li>
                         planta 1                        

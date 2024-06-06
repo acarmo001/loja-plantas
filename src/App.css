@@ -71,15 +71,15 @@ body {
   padding: 9px 0 9px 0;  
 }
 
-.topBanner,img {
+header,img {
   max-width: 100%;
 }
 
-.topBanner {
+header {
   position: relative;
 }
 
-.topBanner h2 {
+header h2 {
   position: absolute;
   top: 70px;
   left: 70px;
@@ -91,6 +91,14 @@ body {
   text-shadow: 2px 2px 2px #B6B5B5;
 }
 
+.first-section {
+  display: flex;
+  margin: 40px;
+}
+
+.first-section ul li {
+  display: inline;
+}
 /* estilização para tablet */
 @media (max-width: 780px) {
     .Navbar {
