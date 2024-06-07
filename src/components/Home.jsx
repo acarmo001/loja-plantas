@@ -1,30 +1,44 @@
+import { useEffect, useState } from "react";
 import Card from "./Card";
 
 export default function Home(){
+
+    const [Stocks, setProductlist] = useState ([]);
+
+    useEffect(() => {
+        fetch('/ProductList.json')
+        .then(response => response.json())
+        .then( data => setProductlist(data));
+    }, []);
+    
     return (
         <main>
-            
-            
             <section className="first-section">
-                <div>
+                <div className="textcolumn">
                     <h2>As mais vendidas</h2>
                     <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
                     <button type="button">ver mais</button>
-                </div>                
-                <ul>
-                    <li>
-                        planta 1                        
-                    </li>
-                    <li>
-                        planta 2
-                    </li>
-                    <li>
-                        planta 3
-                    </li>
-                </ul>
+                </div>                             
+                <div className="bestsellers">
+                    
+                        {
+                            Stocks.map(stock => (
+
+                                <section key={stock.id}>
+                                    
+                                    <figure>
+                                        <img src= { stock.photo } alt="" />
+                                    </figure>
+                                    <h3>{ stock.name }</h3>
+                                    <p>{stock.price} €</p>
+                                </section>
+                            ))
+                        } 
+                    
+                </div>
             </section>
 
-            <section>
+            <section className="second-section">
                 <h2>Quem somos</h2>
                 <p>Encomende agora e aprecie a beleza da natureza</p>
                 <ul>
@@ -43,7 +57,7 @@ export default function Home(){
                 </ul>
             </section>
 
-            <section>
+            <section className="third-section">
                 <h2>Categorias</h2>
                 <p></p>
                 <ul>
@@ -64,7 +78,7 @@ export default function Home(){
                 
             </section>
 
-            <section>
+            <section className="fourth-section">
                 <p>O que dizem os nossos clientes sobre "Plantas aos Molhos"</p>
                 <ul>
                     <li>
