@@ -11,6 +11,9 @@ p {
   font-size: 1rem;
   color: #5b5b5b;
 }
+strong {
+  font-weight: bold;
+}
 
 header,img {
   max-width: 100%;
@@ -32,14 +35,14 @@ header h2 {
   text-shadow: 2px 2px 2px #B6B5B5;
 }
 
-.first-section { 
+.bestsellers-section { 
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 40px;
 
 }
 
-.first-section p {
+.bestsellers-section p {
   text-align: justify;
   line-height: 1.5em;
   padding-top: 10px;
@@ -47,28 +50,26 @@ header h2 {
   padding-right: 10px;
 }
 
-.rectangulo {
-  padding-left: 30px;  
-  padding-top: 17px;
+.bestsellers-section button {
+  font-size: 16px;
+  padding: 10px 20px 10px 5px; 
   color: #1e1e1e;
-  width: 120px;
-  height: 35px;
+  width: 140px;
+  height: 50px;
   background-color: #e4f9f5;
-  border-radius: 12px;
-  margin-left: 30px;
+  border: 1px #e4f9f5;
+  border-radius: 8px;
+  margin: 30px;
   position: relative;
 }
-
-.rectangulo a {
+.bestsellers-section button a {
   text-decoration: none;
-  color:#1e1e1e;
+  color: #1e1e1e;
 }
-.rectangulo img {
-  padding-top: 2px;
-  padding-left: 5px;
+.bestsellers-section button img {
   position: absolute;
-  top: 13px;
-  
+  top: 15px;
+  right: 15px;
 }
 
 .bestsellers {
@@ -88,42 +89,86 @@ header h2 {
   border-radius: 12px;
 }
 
-.second-section {
+.aboutus-section {
   margin: 40px;
   text-align: center;
 }
-.second-section p {
+.aboutus-section p {
   padding-top: 10px;
 }
 
-.horizdisplay {
+.aboutus-display {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 
 }
-.horizdisplay img {
+.aboutus-display img {
   max-width: 60px;
   padding-top: 55px;
   padding-bottom: 25px;
 }
 
-.horizdisplay h3 {
-  font-weight: 700;
-}
-.horizdisplay p {
+.aboutus-display p {
   padding-top: 10px;
   line-height: 1.2em;
+  
 }
 
-.third-section {
+.category-section {
+  text-align: center;    
+}
+
+.category-section p {
+  padding-top: 10px;
+  padding-bottom: 60px; 
+}
+.category-section div {
   background-color: #e4f9f5;
+}
+.category-section button {
+  font-size: 16px;
+  padding: 10px 20px 10px 5px; 
+  color: #1e1e1e;
+  width: 140px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px #fff;
+  border-radius: 8px;
+  margin: 30px;
+  position: relative;
+}
+.category-section button a {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+.category-section button img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.category-display {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #e4f9f5; 
+  grid-gap: 30px;
+    
 }
 
-.third-section img {
-  max-width: 30%;
+.category-display img {
+  max-width: 250px;
+  border-radius: 12px;
+  margin: 10px 30px 5px 30px;  
 }
+
+.imgUp {
+  padding-top: 30px;
+}
+
+.imgDown {
+  padding-top: 90px;
+}
+
 
 
 /* estilização para tablet */
