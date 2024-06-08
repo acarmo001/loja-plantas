@@ -50,23 +50,23 @@ export default function Home(){
             <section className="second-section">
                 <h2>Quem somos</h2>
                 <p>Encomende agora e aprecie a beleza da natureza</p>
-                <ul>
-                    <li>
+                <div className="horizdisplay">                
+                    <div>
                         <img src="/images/Group 1V1.png" alt="" />
                         <h3>Grande variedade</h3>
                         <p>oferecemos diferentes tipos de produtos com menos variações de cada categoria</p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <img src="/images/Group 1v2.png" alt="" />
                         <h3>Envio rápido e gratuito</h3>
                         <p>Prazo de entrega de 4 dias ou menos, envio grátis e opção de entrega rápida</p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <img src="/images/Group 1v3.png" alt="" />
                         <h3>Suporte 24/7</h3>
                         <p>respostas a qualquer consulta relacionada a negócios 24 horas por dia, 7 dias por semana e em tempo real</p>
-                    </li> 
-                </ul>
+                    </div> 
+                </div>
             </section>
 
             <section className="third-section">

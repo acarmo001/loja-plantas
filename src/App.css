@@ -1,7 +1,15 @@
 /* estilização para desktop */
 body {
   font-family: "Poppins", sans-serif;
-
+}
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #40514e;
+}
+p {
+  font-size: 1rem;
+  color: #5b5b5b;
 }
 
 header,img {
@@ -80,14 +88,32 @@ header h2 {
   border-radius: 12px;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 2rem;
-  color: #40514e;
+.second-section {
+  margin: 40px;
+  text-align: center;
 }
-p {
-  font-size: 1rem;
-  color: #808080;
+.second-section p {
+  padding-top: 10px;
+}
+
+.horizdisplay {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+}
+.horizdisplay img {
+  max-width: 60px;
+  padding-top: 55px;
+  padding-bottom: 25px;
+}
+
+.horizdisplay h3 {
+  font-weight: 700;
+}
+.horizdisplay p {
+  padding-top: 10px;
+  line-height: 1.2em;
 }
 
 .third-section {
