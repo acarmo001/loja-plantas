@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Products from "./Products";
 import Card from "./Card";
 
 export default function Home(){
@@ -19,13 +21,12 @@ export default function Home(){
     return (
         <main>
             <section className="first-section">
-                <div className="textcolumn">
+                <div>
                     <h2>As mais vendidas</h2>
                     <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
-                    <button type="button">ver mais</button>
+                    <NavLink to="/products">ver mais</NavLink>
                 </div>                             
                 <div className="bestsellers">
-
                     
                         {
                             productView.map(stock => (
@@ -33,14 +34,13 @@ export default function Home(){
                                 <section key={stock.id}>
                                     
                                     <figure>
-                                        <img src= { stock.photo } alt="" />
+                                        <a href=""><img src= { stock.photo } alt="" /></a>
                                     </figure>
                                     <h3>{ stock.name }</h3>
                                     <p>{stock.price} €</p>
                                 </section>
                             ))
-                        } 
-                    
+                        }                    
                 </div>
             </section>
 
@@ -49,14 +49,17 @@ export default function Home(){
                 <p>Encomende agora e aprecie a beleza da natureza</p>
                 <ul>
                     <li>
+                        <img src="/images/Group 1V1.png" alt="" />
                         <h3>Grande variedade</h3>
                         <p>oferecemos diferentes tipos de produtos com menos variações de cada categoria</p>
                     </li>
                     <li>
+                        <img src="/images/Group 1v2.png" alt="" />
                         <h3>Envio rápido e gratuito</h3>
                         <p>Prazo de entrega de 4 dias ou menos, envio grátis e opção de entrega rápida</p>
                     </li>
                     <li>
+                        <img src="/images/Group 1v3.png" alt="" />
                         <h3>Suporte 24/7</h3>
                         <p>respostas a qualquer consulta relacionada a negócios 24 horas por dia, 7 dias por semana e em tempo real</p>
                     </li> 
@@ -68,16 +71,16 @@ export default function Home(){
                 <p></p>
                 <ul>
                     <li>
-                        <p><strong>Plantas Naturais</strong></p>
-                        <img src="" alt="" />
+                        <img src="/images/pexels-julia-kuzenkov-442028-1974508.jpg" alt="" />
+                        <p><strong>Plantas Exteriores</strong></p>                        
                     </li>
                     <li>
-                        <p><strong>Acessórios</strong></p>
-                        <img src="" alt="" />
+                        <img src="/images/pexels-shottrotter-2249959.jpg" alt="" />
+                        <p><strong>Acessórios</strong></p>                        
                     </li>
                     <li>
-                        <p><strong>Plantas Artificiais</strong></p>
-                        <img src="" alt="" />
+                        <img src="/images/pexels-kate-amos-1408770-2718447.jpg" alt="" />
+                        <p><strong>Plantas Interiores</strong></p>                        
                     </li>
                     <button type="button">Explorar</button>
                 </ul>

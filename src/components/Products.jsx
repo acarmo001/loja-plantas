@@ -21,7 +21,7 @@ export default function Products() {
                 Stocks.map(stock => (
                     <section key={stock.id}>
                         <figure>
-                            <img src= { stock.photo } alt="" />
+                            <a href=""><img src= { stock.photo } alt="" /></a>
                         </figure>
                         <p> {stock.review} <img src="/images/estrela.svg" alt="" /> </p>
                         <h3>{ stock.name }</h3>                                           
