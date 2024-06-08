@@ -4,13 +4,18 @@ import Card from "./Card";
 export default function Home(){
 
     const [Stocks, setProductlist] = useState ([]);
-
+    
+    
     useEffect(() => {
         fetch('/ProductList.json')
         .then(response => response.json())
         .then( data => setProductlist(data));
     }, []);
+
+    const productView = Stocks.filter( (stock) => stock.review > 4.5)
     
+    console.log(productView);
+
     return (
         <main>
             <section className="first-section">
@@ -20,9 +25,10 @@ export default function Home(){
                     <button type="button">ver mais</button>
                 </div>                             
                 <div className="bestsellers">
+
                     
                         {
-                            Stocks.map(stock => (
+                            productView.map(stock => (
 
                                 <section key={stock.id}>
                                     

@@ -10,7 +10,7 @@
 		"description": "A Costela de Adão é uma planta trepadeira de folha persistente que desenvolve lianas (raízes aéreas), as quais ao tocarem no solo formam raízes. No meio natural utilizam as raízes aéreas para trepar pelas árvores. Como planta de interior, pode ser necessário dar-lhes um suporte, como um tutor de fibra de coco ou uma cana, para que se possa apoiar à medida que cresce. Seguindo apenas algumas indicações básicas, a Costela de Adão é uma planta muito fácil de cuidar que nos recompensará com a sua beleza inconfundível em troca de pouco esforço.",
         "photo": "/images/monstera_deliciosa_costela_adao_2.jpg",
 		"price": "17,80",
-		"review": "4,6",
+		"review": "4.6",
 		"status": ""
     },
     {
@@ -23,7 +23,7 @@
 		"description": "A espada-de-santa-barbara, cujo nome científico é Sansevieria trifasciata, é uma planta doméstica popular, com folhas com listras amarelas e pequenas flores perfumadas de verde pálido. Iguanatail, ou cânhamo de corda (Sansevieria hyacinthoides), tem folhas manchadas com faixas verdes claras e bordas amarelas; as flores perfumadas brancas esverdeadas são carregadas em um aglomerado alto.",
         "photo": "/images/espada_santa_barbara_folhas.jpg",
 		"price": "11,90",
-		"review": "3,9",
+		"review": "3.9",
 		"status": ""
     },
     {
@@ -36,7 +36,7 @@
 		"description": "Resistente e fácil de cuidar, a jiboia (Epipremnum pinnatum) é a planta da vez na decoração. Se você ainda não se rendeu aos encantos desta espécie, saiba que ela é ideal para quem está começando a cultivar plantas em casa.",
         "photo": "/images/scindapsus_pothos_jiboia_1.jpg",
 		"price": "18,90",
-		"review": "4,2",
+		"review": "4.2",
 		"status": ""
     },
 {
@@ -49,7 +49,7 @@
 		"description": "A Sansevieria cylindrica é uma planta muito elegante e super resistente. Também conhecida como Lança de São Jorge, é perfeita para aqueles que se esquecem frequentemente de regar. Para além do mais, é uma das plantas mais purificadoras do ar interior e é muito apreciada no Feng Shui pelas propriedades protectoras.",
         "photo": "/images/Sansevieria-Cylindrica.jpg",
 		"price": "16,90",
-		"review": "4,7",
+		"review": "4.7",
 		"status": ""
     },
 {
@@ -62,7 +62,7 @@
 		"description": "A Calathea Medallion é uma verdadeira beleza tropical de folhas arredondadas com padrões brilhantes, como um medalhão, e tons rosa na página inferior. Chamará a si a atenção como poucas e ainda por cima é fácil de cuidar.",
         "photo": "/images/pexels-plantsandgraphics-8734306.jpg",
 		"price": "26,50",
-		"review": "4,4",
+		"review": "4.4",
 		"status": "Esgotado"
     },
 {
@@ -75,7 +75,7 @@
 		"description": "Resistente e fácil de cuidar, a jiboia (Epipremnum pinnatum) é a planta da vez na decoração. Se você ainda não se rendeu aos encantos desta espécie, saiba que ela é ideal para quem está começando a cultivar plantas em casa.",
         "photo": "/images/pexels-daria-ivanenko-3557414-5355466.jpg",
 		"price": "18,90",
-		"review": "4,2",
+		"review": "4.2",
 		"status": ""
     },
 {
@@ -88,7 +88,7 @@
 		"description": "Com origem na China esta planta, também denominada de planta missionária, deve o seu nome à forma como chegou da China à Europa, através de um missionário norueguês. Trata-se se uma planta de interior, de folhas arredondadas e crescimento rápido e tornou-se bastante popular como planta de casa porque requer poucos cuidados e confere um aspeto simples e contemporâneo a qualquer decoração.",
         "photo": "/images/pexels-elgolovchenko-13242093.jpg",
 		"price": "11,40",
-		"review": "4,4",
+		"review": "4.4",
 		"status": ""
     },
 {
@@ -101,7 +101,7 @@
 		"description": "A Senecio rowleyanus ‘Colar de Pérolas’ é uma planta suculenta com folhas esféricas pendentes, a fazer lembrar verdadeiras pérolas verdes. Poderá colocá-la suspensa num macramé para vasos, ou numa prateleira a partir da qual os vistosos ‘fios de pérolas’ possam pender livremente. É uma planta de interior resistente e fácil de cuidar, capaz de tornar qualquer divisão mais verdejante e viva.",
         "photo": "/images/pexels-teona-swift-6913614.jpg",
 		"price": "19,90",
-		"review": "4,5",
+		"review": "4.5",
 		"status": ""
     },
 {
@@ -112,9 +112,9 @@
         "light": "Indireta",
         "rega": "Pouca",	
         "description": "A Ceropegia woodii, ou string of hearts (corações emaranhados) é uma verdadeira doçura de planta com as suas pequenas folhas em forma de coração, em longos fios pendentes. As folhas são suculentas, o que quer dizer que esta planta é tolerante a períodos de falta de água.",
-        "photo": "/images/post-thumb-2.jpg",
+        "photo": "/images/ceropegia.jpg",
 		"price": "8,90",
-		"review": "4,8",
+		"review": "4.8",
 		"status": "Esgotado"
     }
 ]
