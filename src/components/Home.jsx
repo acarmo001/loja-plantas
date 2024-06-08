@@ -24,7 +24,10 @@ export default function Home(){
                 <div>
                     <h2>As mais vendidas</h2>
                     <p>A maneira mais fácil de ter uma vida saudável é comprar suas plantas favoritas</p>
-                    <NavLink to="/products">ver mais</NavLink>
+                    <div className="rectangulo">
+                        <NavLink to="/products">ver mais<img src="/images/ArrowRight.png" alt="" /></NavLink>
+                    </div>              
+                    
                 </div>                             
                 <div className="bestsellers">
                     

@@ -33,12 +33,33 @@ header h2 {
 
 .first-section p {
   text-align: justify;
+  line-height: 1.5em;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 10px;
 }
 
-.first-section button {
+.rectangulo {
+  padding-left: 30px;  
+  padding-top: 17px;
+  color: #1e1e1e;
+  width: 120px;
+  height: 35px;
+  background-color: #e4f9f5;
+  border-radius: 12px;
+  margin-left: 30px;
+  position: relative;
+}
+
+.rectangulo a {
+  text-decoration: none;
+  color:#1e1e1e;
+}
+.rectangulo img {
+  padding-top: 2px;
+  padding-left: 5px;
+  position: absolute;
+  top: 13px;
   
 }
 
@@ -46,7 +67,17 @@ header h2 {
   margin-left: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px; 
+  grid-gap: 20px;
+  
+}
+.bestsellers h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color:#1e1e1e;
+}
+
+.bestsellers img {
+  border-radius: 12px;
 }
 
 h2 {
