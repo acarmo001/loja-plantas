@@ -169,7 +169,46 @@ header h2 {
   padding-top: 90px;
 }
 
+.Comments-section {
+  margin:60px;
+}
+.Comments-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color:#1e1e1e;
+}
+.commentZone {
+  margin: 60px;
+  max-width: 100%;
+  background-color: #e4f9f5;
+  border-radius: 16px;
+  }
 
+.commentZone section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 30px;
+    }
+
+  .commentZone img {
+    width: 150px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 80px;   
+  }
+
+  .commentZone p {
+    line-height: 1.2rem;
+    text-align: justify;
+  }  
+.commentZone h3 {
+  font-size: 1.2rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
 
 /* estilização para tablet */
 @media (max-width: 780px) {

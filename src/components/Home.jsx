@@ -5,18 +5,29 @@ import Card from "./Card";
 
 export default function Home(){
 
-    const [Stocks, setProductlist] = useState ([]);
+    const [stocks, setProductlist] = useState ([]);
     
     
     useEffect(() => {
         fetch('/ProductList.json')
         .then(response => response.json())
-        .then( data => setProductlist(data));
+        .then( productdata => setProductlist(productdata));
     }, []);
 
-    const productView = Stocks.filter( (stock) => stock.review > 4.5)
+    const productView = stocks.filter( (stock) => stock.review > 4.5)
     
-    console.log(productView);
+    const [comments, setComments] = useState ([]);    
+            
+    useEffect(() => {
+        fetch('/Comments.json')
+        .then(response => response.json())
+        .then( commentdata => setComments(commentdata));            
+    }, []);
+
+    //const index = () => Math.ceil(Math.random() * comments.lenght);
+    
+    const commentView = comments.filter( (comment) => comment.id === 3)
+    console.log(commentView);
 
     return (
         <main>
@@ -93,18 +104,26 @@ export default function Home(){
             </section>
 
             <section className="Comments-section">
-                <p>O que dizem os nossos clientes sobre "Plantas aos Molhos"</p>
-                <ul>
-                    <li>
-                        <p>Comentário 1</p>
-                        <img src="" alt="" />  
-                    </li>
-                    <li>
-                        <p>Comentário 2</p>
-                        <img src="" alt="" />  
-                    </li>                   
-                </ul>
+                <h3>O que dizem os nossos clientes sobre<br /> "Plantas aos Molhos"</h3>
                 
+                    <div className="commentZone">
+                        {
+                            commentView.map(comment => (
+
+                                <section key={comment.id}>
+                                    
+                                    <figure>
+                                        <img src= { comment.photo } alt="" />
+                                    </figure>
+                                    <div>
+                                        <h3>{ comment.name }</h3>
+                                        <p>{ comment.comment }</p>
+                                    </div>
+                                </section>
+                            ))
+                        }                         
+                    </div>
+                                    
             </section>
             <footer>
                 <ul className="footlist_redes">
@@ -125,42 +144,19 @@ export default function Home(){
                     </li>                    
                 </ul>
                 <ul className="footList_paginas">
-                    <li>
-                        <a href="/Information">Informação</a>
-                    </li>
-                    <li>
-                        <a href="/Company">Companhia</a>
-                    </li>
+                    
                     <li>
                         <a href="/Contact">Contactos</a>
                     </li>
-                    <li>
-                        <a href="/About">About</a>
-                    </li>
+                    
                     <li>
                         <a href="/Products">Produtos</a>
                     </li>
-                    <li>
-                        <a href="/Blog">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/Comunity">Community</a>
-                    </li>
-                    <li>
-                        <a href="/Career">Carreira</a>
-                    </li>
+                    
                     <li>
                         <a href="/Ourstory">A Nossa História</a>
                     </li>
-                    <li>
-                        <a href="/Gettingstarted">Começar</a>
-                    </li>
-                    <li>
-                        <a href="/Pricing">Preços</a>
-                    </li>
-                    <li>
-                        <a href="/Resources">Recursos</a>
-                    </li>
+                    
                 </ul>
                 <p>2024 todos os direitos reservados </p>               
             </footer>        
