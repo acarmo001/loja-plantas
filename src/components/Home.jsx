@@ -14,19 +14,29 @@ export default function Home(){
         .then( productdata => setProductlist(productdata));
     }, []);
 
-    const productView = stocks.filter( (stock) => stock.review > 4.5)
+    const productView = stocks.filter( (stock) => stock.review > 4.5);
     
-    const [comments, setComments] = useState ([]);    
-            
+    const [comments, setComments] = useState ([]);
+    const [randomNumber, setrandomNumber] = useState (0);
+              
     useEffect(() => {
         fetch('/Comments.json')
         .then(response => response.json())
-        .then( commentdata => setComments(commentdata));            
+        .then( commentdata => { 
+            setComments(commentdata);
+            setrandomNumber(Math.ceil(Math.random() * comments.length));
+        });
+            
     }, []);
+    
+    const commentView = comments.filter( (comment) => comment.id === randomNumber);
+    
+    console.log(randomNumber);
 
     //const index = () => Math.ceil(Math.random() * comments.lenght);
-    
-    const commentView = comments.filter( (comment) => comment.id === 3)
+    //const randomNumber = comments[Math.ceil(Math.random() * comments.lenght)];
+    //console.log(randomNumber);
+   
     console.log(commentView);
 
     return (
@@ -103,7 +113,7 @@ export default function Home(){
                 
             </section>
 
-            <section className="Comments-section">
+            <section className="comments-section">
                 <h3>O que dizem os nossos clientes sobre<br /> "Plantas aos Molhos"</h3>
                 
                     <div className="commentZone">
@@ -111,12 +121,13 @@ export default function Home(){
                             commentView.map(comment => (
 
                                 <section key={comment.id}>
-                                    
-                                    <figure>
-                                        <img src= { comment.photo } alt="" />
-                                    </figure>
                                     <div>
+                                        <figure>
+                                            <img src= { comment.photo } alt="" />
+                                        </figure>
                                         <h3>{ comment.name }</h3>
+                                    </div>
+                                    <div>
                                         <p>{ comment.comment }</p>
                                     </div>
                                 </section>
