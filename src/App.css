@@ -209,10 +209,6 @@ header h2 {
   text-align: center;
 }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-}
 
 /* estilização para tablet */
 @media (max-width: 780px) {

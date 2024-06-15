@@ -33,9 +33,9 @@ export default function Navbar() {
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
                     </a>
                 </li>
-                <li><a href="/login" arial-label="login">
+                <li><NavLink to="/Userlogin" arial-label="login">
                         <FontAwesomeIcon icon={faUser} style={{color: "#40514e",}} />
-                    </a>
+                    </NavLink>
                 </li>                
             </ul>
 

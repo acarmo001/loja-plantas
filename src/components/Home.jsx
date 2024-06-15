@@ -5,8 +5,7 @@ import Card from "./Card";
 
 export default function Home(){
 
-    const [stocks, setProductlist] = useState ([]);
-    
+    const [stocks, setProductlist] = useState ([]);    
     
     useEffect(() => {
         fetch('/ProductList.json')
@@ -17,7 +16,7 @@ export default function Home(){
     const productView = stocks.filter( (stock) => stock.review > 4.5);
     
     const [comments, setComments] = useState ([]);
-    const [randomNumber, setrandomNumber] = useState (0);
+    const [randomNumber, setrandomNumber] = useState (1);
               
     useEffect(() => {
         fetch('/Comments.json')
@@ -29,15 +28,16 @@ export default function Home(){
             
     }, []);
     
-    const commentView = comments.filter( (comment) => comment.id === randomNumber);
+    const commentView = comments.filter( (comment) => comment.id === 1);
     
     console.log(randomNumber);
+    console.log(commentView);
 
     //const index = () => Math.ceil(Math.random() * comments.lenght);
     //const randomNumber = comments[Math.ceil(Math.random() * comments.lenght)];
     //console.log(randomNumber);
    
-    console.log(commentView);
+    
 
     return (
         <main>
@@ -136,41 +136,7 @@ export default function Home(){
                     </div>
                                     
             </section>
-            <footer>
-                <ul className="footlist_redes">
-                    <li>
-                        <img src = "./images/Logotipo-Loja.svg" alt="Plantas aos molhos" />
-                    </li>
-                    <li>
-                        <p>Nós ajudamos a encontrar a sua planta de sonho</p>
-                    </li>
-                    <li>
-                        <a href="/Facebook">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="/Instagram">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="/Twitter">Twitter</a>
-                    </li>                    
-                </ul>
-                <ul className="footList_paginas">
-                    
-                    <li>
-                        <a href="/Contact">Contactos</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/Products">Produtos</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/Ourstory">A Nossa História</a>
-                    </li>
-                    
-                </ul>
-                <p>2024 todos os direitos reservados </p>               
-            </footer>        
+                 
 
 
         </main>

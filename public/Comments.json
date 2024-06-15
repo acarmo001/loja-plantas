@@ -3,18 +3,18 @@
         "id": 1,
         "name": "João Silva",
         "photo": "/images/reviewer-1.jpg",		
-		"comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis eleifend quam adipiscing vitae. Enim lobortis scelerisque fermentum dui. Feugiat nisl pretium fusce id velit ut. Aenean sed adipiscing diam donec adipiscing. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ipsum a arcu cursus vitae congue. Pretium lectus quam id leo. Ultrices dui sapien eget mi. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Egestas fringilla phasellus faucibus scelerisque eleifend."		
+		"comment": "Quis eleifend quam adipiscing vitae. Enim lobortis scelerisque fermentum dui. Aenean sed adipiscing diam donec adipiscing. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. "		
     },
     {
         "id": 2,
         "name": "Maria Costa",
         "photo": "/images/reviewer-2.jpg",	
-		"comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis eleifend quam adipiscing vitae. Enim lobortis scelerisque fermentum dui. Feugiat nisl pretium fusce id velit ut. Aenean sed adipiscing diam donec adipiscing. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ipsum a arcu cursus vitae congue. Pretium lectus quam id leo. Ultrices dui sapien eget mi. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Egestas fringilla phasellus faucibus scelerisque eleifend."		
+		"comment": "Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ipsum a arcu cursus vitae congue. Pretium lectus quam id leo. Ultrices dui sapien eget mi. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Egestas fringilla phasellus faucibus scelerisque eleifend."		
     },
     {
         "id": 3,
         "name": "Vanessa Pereira",
         "photo": "/images/reviewer-3.jpg",		
-		"comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis eleifend quam adipiscing vitae. Enim lobortis scelerisque fermentum dui. Feugiat nisl pretium fusce id velit ut. Aenean sed adipiscing diam donec adipiscing. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ipsum a arcu cursus vitae congue. Pretium lectus quam id leo. Ultrices dui sapien eget mi. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Egestas fringilla phasellus faucibus scelerisque eleifend."		
+		"comment": "Feugiat nisl pretium fusce id velit ut. Aenean sed adipiscing diam donec adipiscing. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus."		
     }
 ]
