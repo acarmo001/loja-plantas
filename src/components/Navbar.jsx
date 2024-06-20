@@ -29,9 +29,9 @@ export default function Navbar() {
                     </div>
                     
                 </li>
-                <li><a href="/shopcar" arial-label="carrinho de compras">
+                <li><NavLink to="/ShoppingCart" arial-label="carrinho de compras">
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
-                    </a>
+                    </NavLink>
                 </li>
                 <li><NavLink to="/Userlogin" arial-label="login">
                         <FontAwesomeIcon icon={faUser} style={{color: "#40514e",}} />

@@ -16,21 +16,21 @@ export default function Home(){
     const productView = stocks.filter( (stock) => stock.review > 4.5);
     
     const [comments, setComments] = useState ([]);
-    const [randomNumber, setrandomNumber] = useState (1);
+    const [randomComment, setrandomComment] = useState (0);
               
     useEffect(() => {
         fetch('/Comments.json')
         .then(response => response.json())
         .then( commentdata => { 
             setComments(commentdata);
-            setrandomNumber(Math.ceil(Math.random() * comments.length));
+            setrandomComment(Math.ceil(Math.random() * commentdata.length));
         });
             
     }, []);
     
-    const commentView = comments.filter( (comment) => comment.id === 1);
+    const commentView = comments.filter( (comment) => comment.id === randomComment);
     
-    console.log(randomNumber);
+    console.log(randomComment);
     console.log(commentView);
 
     //const index = () => Math.ceil(Math.random() * comments.lenght);
@@ -94,15 +94,15 @@ export default function Home(){
                 <h2>Categorias</h2>
                 <p>Encontre o que procura</p>
                 <div className="category-display">
-                    <div className="imgUp">
+                    <div className="imgDown">
                         <img src="/images/pexels-vlada-karpovich-7902930.jpg" alt="" />
                         <h3>Plantas Exteriores</h3>                        
                     </div>
-                    <div className="imgDown">
+                    <div className="imgUp">
                         <img src="/images/pexels-kate-amos-1408770-2718447.jpg" alt="" />
                         <h3>Acessórios</h3>                        
                     </div>
-                    <div className="imgUp">
+                    <div className="imgDown">
                         <img src="/images/pexels-valeriya-827518.jpg" alt="" />
                         <h3>Plantas Interiores</h3>                        
                     </div>                    

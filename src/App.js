@@ -7,6 +7,7 @@ import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Userlogin from './components/Userlogin';
+import Ourstory from './components/Ourstory';
 
 import './App.css';
 
@@ -22,7 +23,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/userlogin' element={<Userlogin />} />          
+          <Route path='/userlogin' element={<Userlogin />} />
+          <Route path='/ourstory' element={<Ourstory />} />      
         </Routes>
         <Footer /> 
       </div>

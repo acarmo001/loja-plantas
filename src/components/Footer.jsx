@@ -24,13 +24,13 @@ export default function Footer () {
             <div className="footer-right">
                 <ul>                        
                     <li>
-                        <NavLink to="/contact">Contactos</NavLink>
+                        <NavLink to="/contact">Contatos</NavLink>
                     </li>                        
                     <li>
                         <NavLink to="/products">Produtos</NavLink>
                     </li>                        
                     <li>
-                        <a href="/Ourstory">A Nossa História</a>
+                        <NavLink to="/Ourstory">A Nossa História</NavLink>
                     </li>                        
                 </ul>
                     
