@@ -22,7 +22,7 @@ export default function Navbar() {
             <ul className="Navbar-right">
                 <li>
                     <div className="searchBtn">
-                        <input type="text" placeholder="Pesquisa" />
+                        <input className="searchbox" type="text" placeholder="Pesquisa" />
                         <button type="submit">
                             <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />    
                         </button>
