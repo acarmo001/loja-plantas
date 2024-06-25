@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Userlogin from './components/Userlogin';
 import Ourstory from './components/Ourstory';
+import ProductPage from './components/ProductPage';
+import { CartContext, CartContextprovider } from './context/CartContext';
 
 import './App.css';
 
@@ -15,20 +17,31 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/userlogin' element={<Userlogin />} />
-          <Route path='/ourstory' element={<Ourstory />} />      
-        </Routes>
-        <Footer /> 
-      </div>
-    </BrowserRouter>
+    <CartContextprovider>
+      <CartContext.Consumer>
+        {
+          context => {
+            return (
+              <BrowserRouter>
+                <div className="App">
+                  <Navbar />
+                  <Header />
+                  <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/products' element={<Products />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/userlogin' element={<Userlogin />} />
+                    <Route path='/ourstory' element={<Ourstory />} />
+                    <Route path='/productPage/:id' element={<ProductPage />} />  
+                  </Routes>
+                  <Footer /> 
+                </div>
+              </BrowserRouter>
+            )
+          }          
+        }       
+      </CartContext.Consumer>
+    </CartContextprovider>
     
   );
 }

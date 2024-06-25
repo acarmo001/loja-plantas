@@ -86,7 +86,7 @@ header h2 {
 }
 
 .bestsellers img {
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .aboutus-section {
@@ -157,7 +157,7 @@ header h2 {
 
 .category-display img {
   max-width: 250px;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   margin: 10px 30px 5px 30px;  
 }
 

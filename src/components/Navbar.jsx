@@ -19,25 +19,25 @@ export default function Navbar() {
                 <li><NavLink to="/contact">Contatos</NavLink></li>
             </ul>
 
-            <ul className="Navbar-right">
-                <li>
-                    <div className="searchBtn">
-                        <input className="searchbox" type="text" placeholder="Pesquisa" />
-                        <button type="submit">
-                            <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />    
-                        </button>
-                    </div>
-                    
-                </li>
-                <li><NavLink to="/ShoppingCart" arial-label="carrinho de compras">
+            <div className="Navbar-right">
+                
+                <div className="iconBtn">
+                    <NavLink to="/ShoppingCart" arial-label="carrinho de compras">
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
                     </NavLink>
-                </li>
-                <li><NavLink to="/Userlogin" arial-label="login">
+                </div>
+                <div className="iconBtn">
+                    <NavLink to="/Userlogin" arial-label="login">
                         <FontAwesomeIcon icon={faUser} style={{color: "#40514e",}} />
                     </NavLink>
-                </li>                
-            </ul>
+                </div>
+                <div>
+                    <input className="searchBox" type="search" placeholder="Pesquisa" />
+                </div>
+                <button className="searchBtn" type="submit" aria-label="ok">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />    
+                </button>              
+            </div>
 
         </nav>
         

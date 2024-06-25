@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { createUser, deleteUser, loadUsers, updateUser } from '../redux/Users';
+
+import '../Styles/UserLogin.css'
 
 export default function Userlogin() {
 
-    /*const [userLogin, setUserlogin] = useState("");
+    const dispatch = useDispatch();
+    const userList = useSelector( state => state.users.value );
+
+    useEffect(() => {
+        fetch("./public/MOCK_Users.json")
+        .then(response => response.json())
+        .then(data => {
+            dispatch( loadUsers(data) )
+        });
+    }, [dispatch]);
+
+    const [userLogin, setUserlogin] = useState("");
     const [password, setPassword] = useState("");
     const [passwordVisible, setPasswordVisible] = useState (false);
 
     const changepasswordvisible = () => {
         setPasswordVisible(!passwordVisible);
-    };*/
+    };
 
     return (
         <form className="userForm" method="post" action="bduser.html">

@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../context/CartContext";
 import Products from "./Products";
-import Card from "./Card";
+import ProductPage from "./ProductPage";
+
+
 
 export default function Home(){
+
+    const { addToCart }= useContext(CartContext);
 
     const [stocks, setProductlist] = useState ([]);    
     
@@ -32,13 +37,7 @@ export default function Home(){
     
     console.log(randomComment);
     console.log(commentView);
-
-    //const index = () => Math.ceil(Math.random() * comments.lenght);
-    //const randomNumber = comments[Math.ceil(Math.random() * comments.lenght)];
-    //console.log(randomNumber);
-   
-    
-
+ 
     return (
         <main>
             <section className="bestsellers-section">
@@ -54,14 +53,13 @@ export default function Home(){
                     
                         {
                             productView.map(stock => (
-
+                                
                                 <section key={stock.id}>
-                                    
                                     <figure>
-                                        <a href=""><img src= { stock.photo } alt="" /></a>
+                                        <NavLink to={"/productPage"}><img src= { stock.photo } alt="" /></NavLink>
                                     </figure>
                                     <h3>{ stock.name }</h3>
-                                    <p>{stock.price} €</p>
+                                    <p>{stock.price} €</p>                                    
                                 </section>
                             ))
                         }                    
