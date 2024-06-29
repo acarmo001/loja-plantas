@@ -1,5 +1,45 @@
-.userForm { 
-    max-width: 100%;   
-    line-height: 3rem;
+.userlogin {
     text-align: center;
+    display: flex;
+    min-height: 40vh;
+    align-items: center;
+    justify-content: center;
+}
+.form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label, .register-form label {
+    text-align: left;
+    font-size: .85rem;
+    padding: 0.25rem 0;
+}
+
+.login-form input, .register-form input {
+    margin: 0.25rem 0;
+}
+
+.login-form button, .register-form button {
+    cursor: pointer;
+    text-align: center;
+    font-size: .85rem;
+    padding: 0.25rem 0;
+    border: none;
+    background-color: #40514e;
+    color: white;
+    border-radius: 5px;
+    margin-top: 0.25rem;
+}
+
+.btn-changeform {
+    background-color: transparent;
+    border: none;
+    color: #40514e;
+    cursor: pointer;
+    padding: 0.25rem 0;
+}
+
+.btn-changeform:hover {
+    color: #1E1E1E;
 }

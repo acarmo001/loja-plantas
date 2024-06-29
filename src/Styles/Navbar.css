@@ -36,24 +36,39 @@
 }
 
 .Navbar-right {
-  max-width: 25%;
+  max-width: 50%;
+  justify-content: flex-start;
   display: grid;
-  grid-template-columns: 1.6rem 1.6rem 1fr 1.6rem;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-gap: .5rem;
   
 }
-.iconBtn {
-  padding: 0.6rem 0.6rem 0.125rem 0.6rem;
-}
-.searchBox {
-  font-family: "Poppins", sans-serif;
-  color: #1E1E1E;
-  font-size: .85rem;
-  margin-top: .15rem;
-  margin-left: .85rem;
-}
-.searchBtn {
+.iconBtn, .searchBtn {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
   border: none;
-  background-color: transparent;  
+  background-color: transparent;
+  cursor: pointer;
+  padding-top: 5px;
 }
+.searchBox {  
+  color: #1E1E1E;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  display:flex;
+  flex-direction: row;
+  
+}
+
+.cartStatus {
+  
+  color: #7d0e0e;
+  font-size: 0.9rem;
+  font-weight: 700; 
+ 
+}
+
 
   

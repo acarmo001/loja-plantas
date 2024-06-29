@@ -10,7 +10,7 @@ export default function Home(){
 
     const { addToCart }= useContext(CartContext);
 
-    const [stocks, setProductlist] = useState ([]);    
+    const [products, setProductlist] = useState ([]);    
     
     useEffect(() => {
         fetch('/ProductList.json')
@@ -18,7 +18,7 @@ export default function Home(){
         .then( productdata => setProductlist(productdata));
     }, []);
 
-    const productView = stocks.filter( (stock) => stock.review > 4.5);
+    const productView = products.filter( (product) => product.review > 4.5);
     
     const [comments, setComments] = useState ([]);
     const [randomComment, setrandomComment] = useState (0);
@@ -52,14 +52,14 @@ export default function Home(){
                 <div className="bestsellers">
                     
                         {
-                            productView.map(stock => (
+                            productView.map(product => (
                                 
-                                <section key={stock.id}>
+                                <section key={product.id}>
                                     <figure>
-                                        <NavLink to={"/productPage"}><img src= { stock.photo } alt="" /></NavLink>
+                                        <NavLink to={"/productPage"}><img src= { product.photo } alt="" /></NavLink>
                                     </figure>
-                                    <h3>{ stock.name }</h3>
-                                    <p>{stock.price} €</p>                                    
+                                    <h3>{ product.name }</h3>
+                                    <p>{product.price} €</p>                                    
                                 </section>
                             ))
                         }                    

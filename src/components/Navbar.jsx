@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import '../Styles/Navbar.css';
 
-
 export default function Navbar() {
+    const [searchText, setSearchText] = useState("");
+    const loadSearch = () => {
+        alert("teste");
+
+    };
+
     return (
         <nav className="Navbar">
             <h1>
@@ -20,23 +24,30 @@ export default function Navbar() {
             </ul>
 
             <div className="Navbar-right">
-                
-                <div className="iconBtn">
-                    <NavLink to="/ShoppingCart" arial-label="carrinho de compras">
-                        <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
-                    </NavLink>
-                </div>
+                <form className="searchBox" onSubmit={loadSearch}>
+                    <input
+                        className="searchinput"
+                        type="search"
+                        value={ searchText }
+                        placeholder="Pesquisa"
+                        onChange={ ({ target }) => setSearchText(target.value) }
+                    />
+                    <button className="searchBtn" type="submit" aria-label="submeter">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />
+                    </button>
+                </form>
+                                
                 <div className="iconBtn">
                     <NavLink to="/Userlogin" arial-label="login">
                         <FontAwesomeIcon icon={faUser} style={{color: "#40514e",}} />
                     </NavLink>
                 </div>
-                <div>
-                    <input className="searchBox" type="search" placeholder="Pesquisa" />
-                </div>
-                <button className="searchBtn" type="submit" aria-label="ok">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />    
-                </button>              
+                <div className="iconBtn">
+                    <NavLink to="/ShoppingCart" arial-label="carrinho de compras">
+                        <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
+                    </NavLink>
+                    <p className="cartStatus">1</p>
+                </div>              
             </div>
 
         </nav>

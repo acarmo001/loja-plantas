@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Userlogin from './components/Userlogin';
 import Ourstory from './components/Ourstory';
 import ProductPage from './components/ProductPage';
+import ShoppingCart from './components/ShoppingCart';
 import { CartContext, CartContextprovider } from './context/CartContext';
 
 import './App.css';
@@ -33,6 +34,7 @@ function App() {
                     <Route path='/userlogin' element={<Userlogin />} />
                     <Route path='/ourstory' element={<Ourstory />} />
                     <Route path='/productPage/:id' element={<ProductPage />} />  
+                    <Route path='/ShoppingCart' element={<ShoppingCart />} />
                   </Routes>
                   <Footer /> 
                 </div>
