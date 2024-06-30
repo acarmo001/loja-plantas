@@ -11,7 +11,8 @@ h2 {
     margin: 0.625rem 1.875rem 0rem 1.875rem;
 }
 
-.galery img {
+.fig-product {
+    width: 100%;
     border-radius: 0.75rem;
 }
 
@@ -37,4 +38,15 @@ h2 {
 }
 .btn-Cart div {
     padding-top: 0.125rem;
+}
+
+/* estilização para smartphone */
+@media (max-width: 420px) {
+    .galery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin: 0.625rem 1.875rem 0rem 1.875rem;
+    }
+    
 }

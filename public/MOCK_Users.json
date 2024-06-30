@@ -1,10 +1,5 @@
-[{"id":1,"first_name":"Graham","last_name":"Tait","email":"gtait0@studiopress.com","user_name":"gtait0","password":"nX5=OznHL!7"},
-{"id":2,"first_name":"Cristobal","last_name":"Dood","email":"cdood1@rambler.ru","user_name":"cdood1","password":"nQ6\\u4?3OdU$s"},
-{"id":3,"first_name":"Rebeka","last_name":"Craighead","email":"rcraighead2@hhs.gov","user_name":"rcraighead2","password":"rK4?(Fy+v|"},
-{"id":4,"first_name":"Philip","last_name":"Corroyer","email":"pcorroyer3@meetup.com","user_name":"pcorroyer3","password":"aQ6>St'/FghL"},
-{"id":5,"first_name":"Cecilio","last_name":"Liepins","email":"cliepins4@webmd.com","user_name":"cliepins4","password":"lL1`Bk`}3uwH&F(V"},
-{"id":6,"first_name":"Torre","last_name":"Quemby","email":"tquemby5@howstuffworks.com","user_name":"tquemby5","password":"jT1?1_+AeF#"},
-{"id":7,"first_name":"Shaun","last_name":"Kirkness","email":"skirkness6@wordpress.org","user_name":"skirkness6","password":"mG2{<QM52"},
-{"id":8,"first_name":"Juliana","last_name":"Deniso","email":"jdeniso7@networksolutions.com","user_name":"jdeniso7","password":"gG7=Oju5L<zLvG"},
-{"id":9,"first_name":"Benetta","last_name":"Zorn","email":"bzorn8@marketwatch.com","user_name":"bzorn8","password":"nJ9!%c/r0!"},
-{"id":10,"first_name":"Arthur","last_name":"Fontelles","email":"afontelles9@qq.com","user_name":"afontelles9","password":"pW3?mF*nT!g5$q%2"}]
+[{"id":1,"username":"Maria Santos","email":"abc@gmail.com","password":"12345"},
+{"id":2,"username":"Inês Garcia","email":"abcd@gmail.com","password":"12345"},
+{"id":3,"username":"João Costa","email":"abcde@gmail.com","password":"12345"},
+{"id":4,"username":"Ana Carmo","email":"abcdef@gmail.com","password":"12345"},
+{"id":5,"username":"Vania Silva","email":"abcdefg@gmail.com","password":"12345"}]

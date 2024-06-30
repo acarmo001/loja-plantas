@@ -6,14 +6,14 @@ export const Register = (props) => {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
 
-    const toSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(username);
     }
     
     return (
         <div className="form-container">
-        <form className="register-form" onSubmit={toSubmit}>
+        <form className="register-form" onSubmit={handleSubmit}>
             
             <label htmlFor="username">
                 Nome de Utilizador

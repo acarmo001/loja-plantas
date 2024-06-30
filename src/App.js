@@ -16,35 +16,39 @@ import './App.css';
 
 
 
+
+
 function App() {
   return (
-    <CartContextprovider>
-      <CartContext.Consumer>
-        {
-          context => {
-            return (
-              <BrowserRouter>
-                <div className="App">
-                  <Navbar />
-                  <Header />
-                  <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/products' element={<Products />} />
-                    <Route path='/contact' element={<Contact />} />
-                    <Route path='/userlogin' element={<Userlogin />} />
-                    <Route path='/ourstory' element={<Ourstory />} />
-                    <Route path='/productPage/:id' element={<ProductPage />} />  
-                    <Route path='/ShoppingCart' element={<ShoppingCart />} />
-                  </Routes>
-                  <Footer /> 
-                </div>
-              </BrowserRouter>
-            )
-          }          
-        }       
-      </CartContext.Consumer>
-    </CartContextprovider>
+         
+      <CartContextprovider>
+        <CartContext.Consumer>
+          {
+            context => {
+              return (
+                <BrowserRouter>
+                  <div className="App">
+                    <Navbar />
+                    <Header />
+                    <Routes>
+                      <Route path='/' element={<Home />} />
+                      <Route path='/products' element={<Products />} />
+                      <Route path='/contact' element={<Contact />} />
+                      <Route path='/userlogin' element={<Userlogin />} />
+                      <Route path='/ourstory' element={<Ourstory />} />
+                      <Route path='/productPage/:id' element={<ProductPage />} />  
+                      <Route path='/ShoppingCart' element={<ShoppingCart />} />
+                    </Routes>
+                    <Footer /> 
+                  </div>
+                </BrowserRouter>
+              )
+            }          
+          }       
+        </CartContext.Consumer>
+      </CartContextprovider>      
     
+
   );
 }
 

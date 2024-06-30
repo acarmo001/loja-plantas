@@ -1,33 +1,31 @@
 import { useState } from "react";
 
-export const Login = (props) => {
+export default function Login(props){
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+      
+    const [userLogin, setUserLogin] = useState({
+        username: "",
+        password: ""
+    })
+     
+    const [signin, setSignin] = useState(false);
 
-    const [signin, setSignin] = useState(true);
-
-    const toSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        
-        if(e.target.username.value && e.target.password.value) {
-            if(!localStorage.getItem("user")){
-                localStorage.setItem("user", JSON.stringify([{username:e.target.username.value, password:e.target.password.value}]))
-            }
-        }
-        console.log(username);
-        console.log(password);        
+        console.log(userLogin.username);
     }
 
     const toLogout = () => {
         localStorage.removeItem();        
     }
 
+    
+
  
 
     return (
         <div className="form-container">
-            <form className="login-form" onSubmit={toSubmit}>
+            <form className="login-form" onSubmit={handleSubmit}>
                 
                 <label htmlFor="username">
                     Nome de Utilizador
@@ -36,8 +34,8 @@ export const Login = (props) => {
                     type="text"
                     name="username"
                     placeholder="Primeiro e último nome"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
+                    value={userLogin.username}
+                    onChange={e => setUserLogin(e.target.value)}
                     required
                 />  
                 <label htmlFor="password">
@@ -48,8 +46,8 @@ export const Login = (props) => {
                     name="password"
                     placeholder="Password"
                     required
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    value={userLogin.password}
+                    onChange={e => setUserLogin(e.target.value)}
                 />                
                 <button>{signin? "Login" : "Logout"}</button>                               
             </form>

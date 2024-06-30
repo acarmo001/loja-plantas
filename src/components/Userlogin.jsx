@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Login } from "./Login";
+import Login from "./Login";
 import { Register } from "./Register";
+import { NavLink } from "react-router-dom";
 
 import '../Styles/UserLogin.css'
 
 
 export default function LoginUser() {
+    
+    
     const [currentForm, setCurrentForm] = useState('login');
 
     const switchForm = (formName) => {

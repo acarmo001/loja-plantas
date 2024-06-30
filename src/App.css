@@ -4,7 +4,7 @@ body {
 }
 h2 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.4rem;  
   color: #40514e;
 }
 p {
@@ -13,26 +13,6 @@ p {
 }
 strong {
   font-weight: bold;
-}
-
-header,img {
-  max-width: 100%;
-}
-
-header {
-  position: relative;
-}
-
-header h2 {
-  position: absolute;
-  top: 70px;
-  left: 70px;
-  color: #40514e;
-  max-width: 450px;
-  line-height: 90px;
-  font-size: 76px;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px #B6B5B5;
 }
 
 .bestsellers-section { 
@@ -173,9 +153,9 @@ header h2 {
   margin:60px;
 }
 .comments-section h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 2.25rem;
   color:#1e1e1e;
 }
 .commentZone {
@@ -215,22 +195,98 @@ header h2 {
 
 /* estilização para tablet */
 @media (max-width: 780px) {
-    .Navbar {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 15px;
-    }
-    .Main .topBanner {
-      width: 100%;
-    }
+    
 }
   
 /* estilização para smartphone */
 @media (max-width: 420px) {
-    .Navbar {
-      grid-template-columns: 1fr;
-      grid-gap: 10px;
+  .bestsellers-section { 
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5px;
+  
+  }
+  
+  .bestsellers-section p {
+    text-align: center;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+  }
+    
+  .bestsellers {    
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2px;    
+  }
+  .bestsellers h3 {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color:#1e1e1e;
+  }
+  
+  .bestsellers img {    
+    width: 100%;
+  }
+  .aboutus-display {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  
+  }
+  .aboutus-display img {   
+    padding-top: 25px;    
+  }
+  .category-display {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #e4f9f5; 
+    grid-gap: 5px;
+      
+  }
+  
+  .category-display img {
+    max-width: 250px;
+    border-radius: 0.75rem;
+    margin: 10px 20px 10px 20px;  
+  }
+  
+  .imgUp {
+    padding-top: 15px;
+  }
+  
+  .imgDown {
+    padding-top: 15px;
+  }
+  
+.comments-section {
+  padding-top: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.commentZone {
+  margin: 10px 10px 10px 10px;
+  max-width: 100%;
+  background-color: #e4f9f5;
+  border-radius: 16px;
+  text-align: center;
+  
+  }
+
+.commentZone section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
     }
-    .Main .topBanner {
-      width: 100%;
-    }
+
+.commentZone img {
+    max-width: 100%;    
+    margin: 10px 10px 10px 10px;
+    border-radius: 50px;    
+}
+
 }  

@@ -1,0 +1,56 @@
+
+header {
+    position: relative;
+}
+
+.imgTitle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    color: #40514e;    
+    line-height: 8rem;
+    font-size: 6rem;
+    
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #B6B5B5;
+}
+.imgHeader {
+    width: 100%;
+}
+
+
+/* estilização para tablet */
+@media (max-width: 780px) {
+    .imgTitle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        color: #40514e;    
+        line-height: 8rem;
+        font-size: 6rem;
+        
+        font-weight: 700;
+        text-shadow: 2px 2px 2px #B6B5B5;
+    }
+}
+  
+/* estilização para smartphone */
+@media (max-width: 420px) {
+    .imgTitle {
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        width:40%;
+        font-size: 1rem;
+        color: #40514e;    
+        line-height: 1rem;  
+        font-weight: 700;
+        text-shadow: 2px 2px 2px #B6B5B5;
+    }
+}  
+
+  
