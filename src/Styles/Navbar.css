@@ -70,5 +70,23 @@
  
 }
 
+/* estilização para tablet */
+@media (max-width: 780px) {
+    
+}
+  
+/* estilização para smartphone */
+@media (max-width: 420px) {
+  .Navbar {
+    display: grid;
+    grid-template-columns: 1fr;  
+    grid-gap: 1.25rem;    
+    margin: 1.875rem 1.875rem;
+    justify-content: center;
+    text-align: center;
+}
+
+}
+
 
   

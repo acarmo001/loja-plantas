@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import Products from "./Products";
-import ProductPage from "./ProductPage";
+
 
 
 

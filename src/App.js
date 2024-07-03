@@ -10,7 +10,7 @@ import Userlogin from './components/Userlogin';
 import Ourstory from './components/Ourstory';
 import ProductPage from './components/ProductPage';
 import ShoppingCart from './components/ShoppingCart';
-import { CartContext, CartContextprovider } from './context/CartContext';
+import { CartContext, CartContextProvider } from './context/CartContext';
 
 import './App.css';
 
@@ -21,12 +21,10 @@ import './App.css';
 function App() {
   return (
          
-      <CartContextprovider>
-        <CartContext.Consumer>
-          {
-            context => {
-              return (
-                <BrowserRouter>
+      <CartContextProvider>
+        <CartContext.Consumer>{
+          context => (
+            <BrowserRouter>
                   <div className="App">
                     <Navbar />
                     <Header />
@@ -42,11 +40,11 @@ function App() {
                     <Footer /> 
                   </div>
                 </BrowserRouter>
-              )
-            }          
-          }       
-        </CartContext.Consumer>
-      </CartContextprovider>      
+          )
+        }
+        </CartContext.Consumer>                
+          
+      </CartContextProvider>      
     
 
   );

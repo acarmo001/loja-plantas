@@ -5,10 +5,14 @@ import { useState } from "react";
 import '../Styles/Navbar.css';
 
 export default function Navbar() {
+    
     const [searchText, setSearchText] = useState("");
-    const loadSearch = () => {
+
+    const loadSearch = (e) => {
+        e.preventDefault();
         alert("teste");
 
+        setSearchText('');
     };
 
     return (

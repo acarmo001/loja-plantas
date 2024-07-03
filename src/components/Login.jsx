@@ -8,18 +8,16 @@ export default function Login(props){
         password: ""
     })
      
-    const [signin, setSignin] = useState(false);
+    /*const [signin, setSignin] = useState(false);*/
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
-        console.log(userLogin.username);
+        Login(userLogin);
     }
 
-    const toLogout = () => {
+    /*const toLogout = () => {
         localStorage.removeItem();        
-    }
-
-    
+    }*/ 
 
  
 
@@ -49,7 +47,7 @@ export default function Login(props){
                     value={userLogin.password}
                     onChange={e => setUserLogin(e.target.value)}
                 />                
-                <button>{signin? "Login" : "Logout"}</button>                               
+                <button>{/*signin? "Login" : "Logout"*/} Login</button>                               
             </form>
             <button className="btn-changeform" onClick={() => props.onSwitchForm("register")}>Não tem conta? Registe-se aqui!</button>
         </div>

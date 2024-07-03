@@ -2,17 +2,21 @@ import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
-export function CartContextprovider(props) {
+export function CartContextProvider(props) {
 
-    const [Cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);
+
+    const [totalCart, setTotalCart] = useState(0);
 
     function addToCart(product) {
-
-        /*setCart(prevState => {
+        
+        console.log(product);
+        
+        setCart(prevState => {
             const cartCopy = [...prevState];
             
             const existingProduct = cartCopy.findIndex(item => item.id == product.id);
-
+            
             if(existingProduct < 0){
                 product.quantity = 1;                
                 cartCopy.push( product );
@@ -20,47 +24,50 @@ export function CartContextprovider(props) {
             else{
                 cartCopy[existingProduct].quantity++;
             }
+            console.log(cartCopy);
             return cartCopy;
-        })*/
+        })
     }
 
     function removeFromCart(product) {
 
-        /*setCart(prevState => {
+        setCart(prevState => {
             const cartCopy = [...prevState];
             
             const existingProduct = cartCopy.findIndex(item => item.id == product.id);
 
-            if(existingProduct < 0){
-                product.quantity = 1;                
-                cartCopy.push( product );
-            }
-            else{
-                cartCopy[existingProduct].quantity++;
-            }
+            if(existingProduct >= 0){
+
+                cartCopy[existingProduct].quantity--;
+                console.log(cartCopy[existingProduct].quantity);
+                if(cartCopy[existingProduct].quantity < 1) {
+                    cartCopy.splice(existingProduct, 1)
+                }                
+            } 
+
             return cartCopy;
-        })*/
+        })
     }
 
     function cancelCart(product) {
-
-        /*setCart(prevState => {
+        setCart(prevState => {
             const cartCopy = [...prevState];
             
             const existingProduct = cartCopy.findIndex(item => item.id == product.id);
+            
+            cartCopy.splice(existingProduct, 1)
+            
+            console.log(cartCopy[existingProduct].quantity);
+                
 
-            if(existingProduct < 0){
-                product.quantity = 1;                
-                cartCopy.push( product );
-            }
-            else{
-                cartCopy[existingProduct].quantity++;
-            }
             return cartCopy;
-        })*/
+        })
+           
     }
+
+
     return (
-        <CartContext.Provider value = {{Cart, addToCart}}>
+        <CartContext.Provider value = {{cart, setCart, addToCart, removeFromCart, cancelCart}}>
             {props.children}
         </CartContext.Provider>
     )

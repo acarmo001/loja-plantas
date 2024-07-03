@@ -4,6 +4,7 @@ h2 {
     line-height: 2rem;
     padding-top: 1.875rem;
 }
+
 .galery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -19,6 +20,7 @@ h2 {
 .product-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: .85rem;
 }
 
 .btn-Cart {
@@ -38,6 +40,12 @@ h2 {
 }
 .btn-Cart div {
     padding-top: 0.125rem;
+}
+
+.product-name {
+    font-size: .85rem;
+    line-height: 1rem;
+    padding: 2px 0 2px 0;
 }
 
 /* estilização para smartphone */
