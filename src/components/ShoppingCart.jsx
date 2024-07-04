@@ -1,12 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 
 import '../Styles/ShoppingCart.css'
 
 export default function ShoppingCart() {
 
-    const {cart, removeFromCart} = useContext(CartContext);
+    const {cart, removeFromCart, totalCart} = useContext(CartContext);
     console.log(cart);
+
+      
+
     return (
         <div className="shopCart">
             <p>Items do carrinho</p>
@@ -19,7 +22,7 @@ export default function ShoppingCart() {
                         <div className="shopitem-content">
                             <h3 className="shopitem-title">{product.name}</h3>
                             <h3 className="shopitem-price">{product.price} €</h3>
-                            <p className="shopitem-quantity">{product.quantity}</p>
+                            <p className="shopitem-quantity">Qtd: {product.quantity}</p>
                             <button type="button" className="shopitem-remove" onClick={ () => removeFromCart(product)}>
                                 -
                             </button>
@@ -29,6 +32,8 @@ export default function ShoppingCart() {
             }            
                         
             <p className="shopCart-total">Total do carrinho</p>
+            <p>{totalCart} €</p>
+            
         
     </div>
     );

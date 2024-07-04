@@ -14,11 +14,8 @@ import { CartContext, CartContextProvider } from './context/CartContext';
 
 import './App.css';
 
-
-
-
-
 function App() {
+  
   return (
          
       <CartContextProvider>
@@ -34,8 +31,12 @@ function App() {
                       <Route path='/contact' element={<Contact />} />
                       <Route path='/userlogin' element={<Userlogin />} />
                       <Route path='/ourstory' element={<Ourstory />} />
-                      <Route path='/productPage/:id' element={<ProductPage />} />  
+                      <Route path='/productPage' element={<ProductPage />} />  
                       <Route path='/ShoppingCart' element={<ShoppingCart />} />
+                      <Route
+                      path=":id"
+                      element={<productPage />}
+                      />
                     </Routes>
                     <Footer /> 
                   </div>

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -8,6 +8,13 @@ export function CartContextProvider(props) {
 
     const [totalCart, setTotalCart] = useState(0);
 
+    useEffect(() => {
+        const newTotal = cart.reduce((accumulator, cart) => accumulator + cart.price * cart.quantity, 0);
+        setTotalCart(newTotal)
+
+    }, [cart]);
+
+    
     function addToCart(product) {
         
         console.log(product);
@@ -55,7 +62,7 @@ export function CartContextProvider(props) {
             
             const existingProduct = cartCopy.findIndex(item => item.id == product.id);
             
-            cartCopy.splice(existingProduct, 1)
+            cartCopy.splice(existingProduct, 0)
             
             console.log(cartCopy[existingProduct].quantity);
                 
@@ -67,7 +74,7 @@ export function CartContextProvider(props) {
 
 
     return (
-        <CartContext.Provider value = {{cart, setCart, addToCart, removeFromCart, cancelCart}}>
+        <CartContext.Provider value = {{cart, setCart, addToCart, removeFromCart, cancelCart, totalCart}}>
             {props.children}
         </CartContext.Provider>
     )

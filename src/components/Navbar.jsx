@@ -1,16 +1,25 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import '../Styles/Navbar.css';
+import { CartContext } from "../context/CartContext";
 
 export default function Navbar() {
-    
+
+    const { cart } = useContext(CartContext);
+
+    const totalCart = () => {
+        return cart.reduce((total, item) => total + item.price* item.quantity, 0)
+
+    };
+
+
     const [searchText, setSearchText] = useState("");
 
     const loadSearch = (e) => {
         e.preventDefault();
-        alert("teste");
+        alert("Pesquisou por " + searchText);
 
         setSearchText('');
     };
@@ -50,7 +59,7 @@ export default function Navbar() {
                     <NavLink to="/ShoppingCart" arial-label="carrinho de compras">
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#40514e",}} />
                     </NavLink>
-                    <p className="cartStatus">1</p>
+                    <p className="cartStatus">{cart.length}</p>
                 </div>              
             </div>
 

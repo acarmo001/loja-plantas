@@ -2,12 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 
-
-
-
 export default function Home(){
-
-    const { addToCart }= useContext(CartContext);
 
     const [products, setProductlist] = useState ([]);    
     
