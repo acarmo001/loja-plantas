@@ -29,12 +29,11 @@ export default function ShoppingCart() {
                         </div>
                     </div>
                 ))
-            }            
-                        
-            <p className="shopCart-total">Total do carrinho</p>
-            <p>{totalCart} €</p>
-            
-        
+            }
+            <div className="shopCart-total">        
+                <p>Total do carrinho</p>
+                <h3>{totalCart} €</h3>
+            </div>
     </div>
     );
 }

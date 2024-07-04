@@ -10,9 +10,11 @@ import Userlogin from './components/Userlogin';
 import Ourstory from './components/Ourstory';
 import ProductPage from './components/ProductPage';
 import ShoppingCart from './components/ShoppingCart';
+
 import { CartContext, CartContextProvider } from './context/CartContext';
 
 import './App.css';
+import Login from './components/Login';
 
 function App() {
   
@@ -31,12 +33,10 @@ function App() {
                       <Route path='/contact' element={<Contact />} />
                       <Route path='/userlogin' element={<Userlogin />} />
                       <Route path='/ourstory' element={<Ourstory />} />
-                      <Route path='/productPage' element={<ProductPage />} />  
+                      <Route path='/productPage/:id' element={<ProductPage />} />  
                       <Route path='/ShoppingCart' element={<ShoppingCart />} />
-                      <Route
-                      path=":id"
-                      element={<productPage />}
-                      />
+                      <Route path='/login' element={<Login />} />                      
+                      
                     </Routes>
                     <Footer /> 
                   </div>

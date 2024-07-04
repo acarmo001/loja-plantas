@@ -20,7 +20,7 @@
     margin: 0.25rem 0;
 }
 
-.login-form button, .register-form button {
+.login-form .btn-login, .register-form button {
     cursor: pointer;
     text-align: center;
     font-size: .85rem;

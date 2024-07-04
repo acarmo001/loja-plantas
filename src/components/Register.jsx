@@ -48,7 +48,7 @@ export const Register = (props) => {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
             />
-            <button>Registar</button>
+            <button type="submit">Registar</button>
         </form>
         <button className="btn-changeform" onClick={() => props.onSwitchForm("login")}>Já tem conta? Faça login aqui!</button>
     </div>

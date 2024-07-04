@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <nav className="Navbar">
             <h1>
-                <img src = "./images/Logotipo-Loja.svg" alt="Plantas aos molhos" />
+                <img src = "/images/Logotipo-Loja.svg" alt="Plantas aos molhos" />
             </h1>            
 
             <ul className="Navbar-center">

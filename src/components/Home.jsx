@@ -50,7 +50,7 @@ export default function Home(){
                                 
                                 <section key={product.id}>
                                     <figure>
-                                        <NavLink to={"/productPage"}><img src= { product.photo } alt="" /></NavLink>
+                                        <NavLink to={`/productPage/${product.id}`}><img src= { product.photo } alt="" /></NavLink>
                                     </figure>
                                     <h3>{ product.name }</h3>
                                     <p>{product.price} €</p>                                    

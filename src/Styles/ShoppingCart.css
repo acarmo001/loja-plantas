@@ -47,3 +47,12 @@
     height: 30px;
     cursor: pointer;
 }
+.shopCart-total {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.shopCart-total h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 10px;
+}

@@ -26,7 +26,7 @@ export default function Products() {
                 products.map(product => (
                     <section key={product.id}>
                         <figure>
-                            <NavLink to={ `/productPage` }><img className="fig-product" src= { product.photo } alt="" /></NavLink>
+                            <NavLink to={ `/productPage/${product.id}` }><img className="fig-product" src= { product.photo } alt="" /></NavLink>
                         </figure>
                         <div className="product-info">
                             <p> {product.review} <img className="star-review" src="/images/estrela.svg" alt="" /> </p>

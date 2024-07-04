@@ -2,13 +2,15 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { CartContext } from "../context/CartContext";
 
+import '../Styles/ProductPage.css'
+
 export default function ProductPage () {
 
     const {addToCart} = useContext(CartContext);
 
     const params = useParams();    
 
-    const [product, setProduct] = useState ([]);    
+    const [product, setProduct] = useState ({});    
     
     useEffect(() => {
         fetch('/ProductList.json')
@@ -28,8 +30,8 @@ export default function ProductPage () {
         <div>
             
             {product &&
-                product.map(product => (
-                    <div key={product.id}>
+                
+                    <div  className="wrapper" key={product.id}>
                         <figure>
                             <img src={product.photo} alt="imagem do produto" />
                         </figure>
@@ -52,7 +54,7 @@ export default function ProductPage () {
                         <button>-</button>
                         <button>x</button>
                     </div>
-                ))                
+                               
             }
         </div>
     );

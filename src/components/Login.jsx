@@ -3,16 +3,15 @@ import { useState } from "react";
 export default function Login(props){
 
       
-    const [userLogin, setUserLogin] = useState({
-        username: "",
-        password: ""
-    })
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    
      
     /*const [signin, setSignin] = useState(false);*/
 
     function handleSubmit(e) {
         e.preventDefault();
-        Login(userLogin);
+        
     }
 
     /*const toLogout = () => {
@@ -32,8 +31,8 @@ export default function Login(props){
                     type="text"
                     name="username"
                     placeholder="Primeiro e último nome"
-                    value={userLogin.username}
-                    onChange={e => setUserLogin(e.target.value)}
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
                     required
                 />  
                 <label htmlFor="password">
@@ -44,10 +43,10 @@ export default function Login(props){
                     name="password"
                     placeholder="Password"
                     required
-                    value={userLogin.password}
-                    onChange={e => setUserLogin(e.target.value)}
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
                 />                
-                <button>{/*signin? "Login" : "Logout"*/} Login</button>                               
+                <input className="btn-login" type="submit" value="Login" />                               
             </form>
             <button className="btn-changeform" onClick={() => props.onSwitchForm("register")}>Não tem conta? Registe-se aqui!</button>
         </div>
