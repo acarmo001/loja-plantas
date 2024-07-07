@@ -6,7 +6,7 @@ export default function Footer () {
         <footer>
             <div className="footer-left">
                 <div className="footer-logo">
-                    <img src = "./images/Logotipo-Loja.svg" alt="Plantas aos molhos" />
+                    <img src = "/images/Logotipo-Loja.svg" alt="Plantas aos molhos" />
                     <p>Nós ajudamos a encontrar a sua planta de sonho</p>
                 </div>
                 <ul>

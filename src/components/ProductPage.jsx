@@ -6,7 +6,7 @@ import '../Styles/ProductPage.css'
 
 export default function ProductPage () {
 
-    const {addToCart} = useContext(CartContext);
+    const {addToCart, removeFromCart, cancelCart} = useContext(CartContext);
 
     const params = useParams();    
 
@@ -31,28 +31,30 @@ export default function ProductPage () {
             
             {product &&
                 
-                    <div  className="wrapper" key={product.id}>
-                        <figure>
+                    <div className="wrapper" key={product.id}>
+                        <figure className="fig-productpage">
                             <img src={product.photo} alt="imagem do produto" />
+                            <div>                            
+                                <button type="button" onClick={() => removeFromCart(product)}>-</button>                                
+                                <button type="button" onClick={() => addToCart(product)}>+</button>
+                                <button type="button" onClick={() => cancelCart(product)}>x</button>
+                        </div>
                         </figure>
-                        <dl>
+                        <dl className="productpage-info">
                             <dt>Nome:</dt>
-                            <dl>{product.name}</dl>
+                            <dd>{product.name}</dd>
                             <dt>Ambiente:</dt>
-                            <dl>{product.type}</dl>
+                            <dd>{product.type}</dd>
                             <dt>Luminosidade:</dt>
-                            <dl>{product.light}</dl>
+                            <dd>{product.light}</dd>
                             <dt>Rega:</dt>
-                            <dl>{product.rega}</dl>
+                            <dd>{product.rega}</dd>
                             <dt>Descrição:</dt>
-                            <dl>{product.description}</dl>
+                            <dd>{product.description}</dd>
                             <dt>Preço:</dt>
-                            <dl>{product.price} €</dl>                
-                        </dl>           
-                        <button type="button" onClick={() => addToCart(product)}>+</button>
-                        <p> {product.stock} </p>
-                        <button>-</button>
-                        <button>x</button>
+                            <dd>{product.price} €</dd>                
+                        </dl> 
+                        
                     </div>
                                
             }

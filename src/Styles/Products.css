@@ -49,7 +49,7 @@ h2 {
 }
 
 /* estilização para smartphone */
-@media (max-width: 420px) {
+@media (max-width: 460px) {
     .galery {
         display: grid;
         grid-template-columns: 1fr;

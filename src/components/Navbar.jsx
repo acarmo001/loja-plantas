@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import '../Styles/Navbar.css';
 import { CartContext } from "../context/CartContext";
 
@@ -14,14 +14,23 @@ export default function Navbar() {
 
     };
 
-
+    const [searchItems, setSearchItems] = useState([]);
     const [searchText, setSearchText] = useState("");
+    
+
+    useEffect(() => {
+        fetch('/ProductList.json')
+        .then(response => response.json())
+        .then( productdata => setSearchItems(productdata));
+    }, []);
+
+    const findText = searchItems.filter( (search) => search.name.toLowerCase().includes(searchText.toLowerCase()))
+    console.log(findText);
 
     const loadSearch = (e) => {
         e.preventDefault();
-        alert("Pesquisou por " + searchText);
-
-        setSearchText('');
+        //alert("Pesquisou por " + searchText);
+        //setSearchText('');
     };
 
     return (
@@ -45,7 +54,8 @@ export default function Navbar() {
                         placeholder="Pesquisa"
                         onChange={ ({ target }) => setSearchText(target.value) }
                     />
-                    <button className="searchBtn" type="submit" aria-label="submeter">
+
+                    <button className="searchBtn" type="submit" aria-label="submeter" >
                         <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#40514e",}} />
                     </button>
                 </form>

@@ -10,7 +10,9 @@ export function CartContextProvider(props) {
 
     useEffect(() => {
         const newTotal = cart.reduce((accumulator, cart) => accumulator + cart.price * cart.quantity, 0);
+        
         setTotalCart(newTotal)
+        
 
     }, [cart]);
 

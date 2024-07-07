@@ -21,7 +21,7 @@ export default function ShoppingCart() {
             
                         <div className="shopitem-content">
                             <h3 className="shopitem-title">{product.name}</h3>
-                            <h3 className="shopitem-price">{product.price} €</h3>
+                            <h3 className="shopitem-price">{product.price.toFixed(2)} €</h3>
                             <p className="shopitem-quantity">Qtd: {product.quantity}</p>
                             <button type="button" className="shopitem-remove" onClick={ () => removeFromCart(product)}>
                                 -
@@ -32,7 +32,7 @@ export default function ShoppingCart() {
             }
             <div className="shopCart-total">        
                 <p>Total do carrinho</p>
-                <h3>{totalCart} €</h3>
+                <h3>{totalCart.toFixed(2)} €</h3>
             </div>
     </div>
     );

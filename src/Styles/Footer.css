@@ -58,7 +58,7 @@ footer {
   }
 
   /* estilização para smartphone */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   footer {
     display: grid;
     grid-template-columns: 1fr;

@@ -15,7 +15,13 @@ p {
 strong {
   font-weight: bold;
 }
-
+.App {
+  max-width: 1700px;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
 .bestsellers-section {
   width: 95%;
   display: grid;
@@ -192,17 +198,20 @@ strong {
   text-align: center;
 }
 
-
-
-
-
 /* estilização para tablet */
-@media (max-width: 780px) {
+@media (max-width: 960px) {
     
+  .App {
+    width:100%;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+ 
 }
   
 /* estilização para smartphone */
-@media (max-width: 420px) {
+@media (max-width: 460px) {
   .bestsellers-section { 
     display: grid;
     grid-template-columns: 1fr;
